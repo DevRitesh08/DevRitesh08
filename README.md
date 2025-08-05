@@ -42,3 +42,9 @@
 <p>
   <img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=DevRitesh08&" alt="DevRitesh08" />
 </p>
+
+---
+
+<p align="center">
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=merko" alt="Random Dev Quote" />
+</p>
