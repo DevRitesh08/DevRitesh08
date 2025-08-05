@@ -5,7 +5,6 @@
   <img src="https://komarev.com/ghpvc/?username=DevRitesh08&label=Profile%20views&color=0e75b6&style=flat" alt="DevRitesh08" />
 </p>
 
-- 🔭 I’m currently working on **Big Data & Analytics projects using PySpark and SQL**
 - 🌱 I’m currently learning **Machine Learning and advanced PySpark**
 - 💬 Ask me about **Python, PySpark, SQL, OOP, DBMS, Cassandra, MongoDB, Java, C++, HTML, CSS**
 - 📫 How to reach me: **riteshswamiofficial@gmail.com**
