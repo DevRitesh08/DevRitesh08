@@ -36,7 +36,13 @@
   <p align="center">
     <img src="https://github-readme-stats.vercel.app/api?username=DevRitesh08&show_icons=true&theme=merko" alt="stats"/>
     <img src="https://github-readme-stats.vercel.app/api/top-langs?username=DevRitesh08&layout=compact&theme=merko" alt="langs"/>
+    <!-- Streak stats image with fallback text and direct link -->
     <img src="https://streak-stats.demolab.com?user=DevRitesh08&theme=merko" alt="streak"/>
+    <br>
+    <img src="https://img.shields.io/badge/days%20streak-Check%20your%20profile-blue?style=for-the-badge" alt="streak-fallback"/>
+    <br>
+    <sub>If the above image isn't visible, try refreshing or check your network.<br>
+    Alternatively, view your streak directly here: <a href="https://streak-stats.demolab.com?user=DevRitesh08&theme=merko">Streak Stats Direct Link</a></sub>
   </p>
 </details>
 
