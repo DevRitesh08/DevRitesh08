@@ -16,7 +16,7 @@
 </p>
 
 - 🌱 I’m currently learning **Machine Learning and advanced PySpark**
-- 💬 Ask me about **Python, PySpark, SQL, OOP, DBMS, Cassandra, MongoDB, Java, C++, HTML, CSS**
+- 💬 Always eager to connect and explore new opportunities in tech!
 - 📫 How to reach me: [riteshswamiofficial@gmail.com](mailto:riteshswamiofficial@gmail.com)
 
 <h3 align="center">Connect with me</h3>
@@ -28,9 +28,37 @@
 
 <h3 align="center">Languages and Tools</h3>
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,pytorch,java,cpp,html,css,linux,git,mongodb,postgres,sqlite" />
-  <img src="https://img.shields.io/badge/PySpark-E25A1C?style=for-the-badge&logo=apache-spark&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Cassandra-1287B1?style=for-the-badge&logo=apache-cassandra&logoColor=white"/>
+
+  <!-- Python GIF (widely used in READMEs, not official) -->
+  <img src="https://media.giphy.com/media/KAq5w47R9rmTuvWOWa/giphy.gif" alt="Python" title="Python" width="50" height="50" />
+
+  <!-- C++ official -->
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" title="C++" width="50" height="50" />
+
+  <!-- Java official -->
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" title="Java" width="50" height="50" />
+
+  <!-- PySpark/Spark official -->
+  <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Apache_Spark_logo.svg" alt="PySpark" title="PySpark" width="50" height="50" />
+
+  <!-- Cassandra official -->
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cassandra/cassandra-original.svg" alt="Cassandra" title="Cassandra" width="50" height="50" />
+
+  <!-- SQL: MySQL as representative -->
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" title="SQL" width="50" height="50" />
+
+  <!-- HTML official -->
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" title="HTML" width="50" height="50" />
+
+  <!-- CSS official -->
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" title="CSS" width="50" height="50" />
+
+  <!-- Linux official -->
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" title="Linux" width="50" height="50" />
+
+  <!-- Git official -->
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" title="Git" width="50" height="50" />
+
 </p>
 
 <!-- Github Stats Section -->
