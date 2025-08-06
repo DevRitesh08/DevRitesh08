@@ -1,0 +1,61 @@
+name: Update Trophies in README
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-trophies:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install requests
+        run: pip install requests
+
+      - name: Fetch and filter trophies, update README
+        env:
+          GITHUB_USERNAME: DevRitesh08
+        run: |
+          python <<'EOF'
+          import requests
+          import re
+
+          url = f"https://github-profile-trophy.vercel.app/api/json/{'$'}{{GITHUB_USERNAME}}"
+          data = requests.get(url).json()
+          trophies = [t for t in data["trophies"] if t["level"] > 0]
+          trophy_names = '&'.join([f"title={t['name'].replace(' ', '+')}" for t in trophies])
+          trophy_img = f"https://github-profile-trophy.vercel.app/?username={ '${GITHUB_USERNAME}' }&theme=onestar&margin-w=10"
+          if trophy_names:
+              trophy_img += f"&{trophy_names}"
+          trophy_md = (
+              '<a href="https://github.com/ryo-ma/github-profile-trophy">\n'
+              f'  <img src="{trophy_img}" alt="trophy" />\n'
+              '</a>'
+          )
+
+          with open("README.md", "r", encoding="utf-8") as f:
+              readme = f.read()
+          new_readme = re.sub(
+              r'<!-- TROPHY_SECTION_START -->(.*?)<!-- TROPHY_SECTION_END -->',
+              f'<!-- TROPHY_SECTION_START -->\n{trophy_md}\n<!-- TROPHY_SECTION_END -->',
+              readme,
+              flags=re.DOTALL,
+          )
+          with open("README.md", "w", encoding="utf-8") as f:
+              f.write(new_readme)
+          EOF
+
+      - name: Commit and push if changed
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --cached --quiet || git commit -m "Update trophies in README [CI]"
+          git push
