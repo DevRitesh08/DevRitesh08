@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=15C39A&background=FFFFFF00&center=true&vCenter=true&width=435&lines=Hi+%F0%9F%91%8B%2C+I'm+Ritesh+Swami;Aspiring+Data+Scientist+%7C+Pythonista" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=15C39A&background=FFFFFF00&center=true&vCenter=true&width=435&lines=Hi+%F0%9F%91%8B%2C+I'm+Ritesh+Swami;Aspiring+Data+Scientist;Always+learning+something+new..." alt="Typing SVG" />
 </h1>
 
 <p align="center">
@@ -33,14 +33,23 @@
   <img src="https://img.shields.io/badge/Cassandra-1287B1?style=for-the-badge&logo=apache-cassandra&logoColor=white"/>
 </p>
 
+<!-- Github Stats Section -->
 <details>
   <summary><b>📊 Github Stats</b></summary>
   <p align="center">
-    <b>If streak stats image does not load, <a href='https://streak-stats.demolab.com?user=DevRitesh08&theme=merko'>click here to view your streak stats directly</a>.</b><br><br>
     <img src="https://github-readme-stats.vercel.app/api?username=DevRitesh08&show_icons=true&theme=merko" alt="stats"/>
     <img src="https://github-readme-stats.vercel.app/api/top-langs?username=DevRitesh08&layout=compact&theme=merko" alt="langs"/>
     <img src="https://streak-stats.demolab.com?user=DevRitesh08&theme=merko" alt="streak"/>
   </p>
+</details>
+
+<details>
+<summary>🎉 Fun Facts About Me</summary>
+
+- 📖 I like reading books
+- 👨‍💻 Coding is my passion
+- 🎬 I'm a movies & web series freak
+
 </details>
 
 <p align="center">
