@@ -20,7 +20,7 @@
 <p align="center">
   <a href="mailto:riteshswamiofficial@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
   <a href="https://github.com/DevRitesh08"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>
-  <a href="https://linkedin.com/in/your-linkedin"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
+  <a href="https://www.linkedin.com/in/ritesh-swami-61ab53309/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
   <a href="https://twitter.com/your-twitter"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white"></a>
 </p>
 
@@ -34,6 +34,7 @@
 <details>
   <summary><b>📊 Github Stats</b></summary>
   <p align="center">
+    <b>If streak stats image does not load, <a href='https://streak-stats.demolab.com?user=DevRitesh08&theme=merko'>click here to view your streak stats directly</a>.</b><br><br>
     <img src="https://github-readme-stats.vercel.app/api?username=DevRitesh08&show_icons=true&theme=merko" alt="stats"/>
     <img src="https://github-readme-stats.vercel.app/api/top-langs?username=DevRitesh08&layout=compact&theme=merko" alt="langs"/>
     <!-- Streak stats image with fallback text and direct link -->
@@ -41,7 +42,7 @@
     <br>
     <img src="https://img.shields.io/badge/days%20streak-Check%20your%20profile-blue?style=for-the-badge" alt="streak-fallback"/>
     <br>
-    <sub>If the above image isn't visible, try refreshing or check your network.<br>
+    <sub>If the above image isn't visible, it may be a GitHub caching or image proxy issue. Try refreshing after a few minutes, or use the direct link above.<br>
     Alternatively, view your streak directly here: <a href="https://streak-stats.demolab.com?user=DevRitesh08&theme=merko">Streak Stats Direct Link</a></sub>
   </p>
 </details>
