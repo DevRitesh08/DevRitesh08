@@ -26,14 +26,21 @@ jobs:
           python <<'EOF'
           import requests
           import re
+          import sys
 
           url = f"https://github-profile-trophy.vercel.app/api/json/{'$'}{{GITHUB_USERNAME}}"
           response = requests.get(url)
+          if response.status_code != 200:
+              print(f"Failed to fetch the API. Status: {response.status_code}\nResponse: {response.text}")
+              sys.exit(0)
+          if not response.text.strip():
+              print(f"API returned empty response for {url}")
+              sys.exit(0)
           try:
               data = response.json()
-          except ValueError:
-              print(f"Failed to decode JSON from {url}. Response was: {response.text}")
-              exit(1)
+          except Exception as e:
+              print(f"Failed to decode JSON from {url}. Response was: {response.text}\nError: {e}")
+              sys.exit(0)
 
           trophies = [t for t in data.get("trophies", []) if t.get("level", 0) > 0]
           trophy_names = '&'.join([f"title={t['name'].replace(' ', '+')}" for t in trophies])
