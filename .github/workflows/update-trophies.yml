@@ -28,8 +28,14 @@ jobs:
           import re
 
           url = f"https://github-profile-trophy.vercel.app/api/json/{'$'}{{GITHUB_USERNAME}}"
-          data = requests.get(url).json()
-          trophies = [t for t in data["trophies"] if t["level"] > 0]
+          response = requests.get(url)
+          try:
+              data = response.json()
+          except ValueError:
+              print(f"Failed to decode JSON from {url}. Response was: {response.text}")
+              exit(1)
+
+          trophies = [t for t in data.get("trophies", []) if t.get("level", 0) > 0]
           trophy_names = '&'.join([f"title={t['name'].replace(' ', '+')}" for t in trophies])
           trophy_img = f"https://github-profile-trophy.vercel.app/?username={ '${GITHUB_USERNAME}' }&theme=onestar&margin-w=10"
           if trophy_names:
