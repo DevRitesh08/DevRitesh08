@@ -9,10 +9,10 @@
 <p align="center">
   <!-- Trophy section is managed by GitHub Actions CI/CD. Do not edit manually. -->
   <!-- TROPHY_SECTION_START -->
-  <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=DevRitesh08&theme=onestar&margin-w=10" alt="trophy" />
-  </a>
-  <!-- TROPHY_SECTION_END -->
+<a href="https://github.com/ryo-ma/github-profile-trophy">
+  <img src="https://github-profile-trophy.vercel.app/?username=DevRitesh08&theme=onestar&margin-w=10" alt="trophy" />
+</a>
+<!-- TROPHY_SECTION_END -->
 </p>
 
 - 🌱 I’m currently learning **Machine Learning and advanced PySpark**
