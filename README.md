@@ -29,39 +29,19 @@
 <h3 align="center">Languages and Tools</h3>
 <p align="center">
 
-  <!-- Python GIF (widely used in READMEs, not official) -->
   <img src="https://media.giphy.com/media/KAq5w47R9rmTuvWOWa/giphy.gif" alt="Python" title="Python" width="50" height="50" />
-
-  <!-- C++ official -->
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" title="C++" width="50" height="50" />
-
-  <!-- Java official -->
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" title="Java" width="50" height="50" />
-
-  <!-- PySpark/Spark official -->
   <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Apache_Spark_logo.svg" alt="PySpark" title="PySpark" width="50" height="50" />
-
-  <!-- Cassandra official -->
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cassandra/cassandra-original.svg" alt="Cassandra" title="Cassandra" width="50" height="50" />
-
-  <!-- SQL: MySQL as representative -->
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" title="SQL" width="50" height="50" />
-
-  <!-- HTML official -->
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" title="HTML" width="50" height="50" />
-
-  <!-- CSS official -->
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" title="CSS" width="50" height="50" />
-
-  <!-- Linux official -->
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" title="Linux" width="50" height="50" />
-
-  <!-- Git official -->
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" title="Git" width="50" height="50" />
 
 </p>
 
-<!-- Github Stats Section -->
 <details>
   <summary><b>📊 Github Stats</b></summary>
   <p align="center">
@@ -74,9 +54,9 @@
 <details>
 <summary>🎉 Fun Facts About Me</summary>
 
-- 📖 I like reading books
-- 👨‍💻 Coding is my passion
-- 🎬 I'm a movies & web series freak
+- 📖 I like reading books  
+- 👨‍💻 Coding is my passion  
+- 🎬 I'm a movies & web series freak  
 
 </details>
 
