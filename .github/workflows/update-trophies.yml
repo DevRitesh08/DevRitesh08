@@ -8,6 +8,7 @@ on:
 jobs:
   update-trophies:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
 
@@ -16,40 +17,75 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Install requests
+      - name: Install dependencies
         run: pip install requests
 
       - name: Fetch and filter trophies, update README
         env:
           GITHUB_USERNAME: DevRitesh08
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          python <<'EOF'
-          import requests
+          python3 << 'EOF'
+          import os
+          import sys
+          import json
           import re
+          import requests
 
-          url = f"https://github-profile-trophy.vercel.app/api/json/{'$'}{{GITHUB_USERNAME}}"
-          data = requests.get(url).json()
-          trophies = [t for t in data["trophies"] if t["level"] > 0]
-          trophy_names = '&'.join([f"title={t['name'].replace(' ', '+')}" for t in trophies])
-          trophy_img = f"https://github-profile-trophy.vercel.app/?username={ '${GITHUB_USERNAME}' }&theme=onestar&margin-w=10"
-          if trophy_names:
-              trophy_img += f"&{trophy_names}"
+          username = os.environ.get("GITHUB_USERNAME")
+          token = os.environ.get("GITHUB_TOKEN")
+          if not username or not token:
+              print("❌ GITHUB_USERNAME or GITHUB_TOKEN not set")
+              sys.exit(1)
+
+          url = f"https://github-profile-trophy.vercel.app/api/json/{username}"
+          headers = {
+              "Authorization": f"token {token}",
+              "Accept": "application/json",
+          }
+
+          resp = requests.get(url, headers=headers)
+          if resp.status_code != 200:
+              print(f"❌ Failed to fetch trophies: HTTP {resp.status_code}")
+              print(resp.text)
+              sys.exit(1)
+
+          try:
+              data = resp.json()
+          except json.JSONDecodeError:
+              print("❌ Invalid JSON returned from trophy API:")
+              print(resp.text)
+              sys.exit(1)
+
+          trophies = [t for t in data.get("trophies", []) if t.get("level", 0) > 0]
+          params = "&".join(f"title={t['name'].replace(' ', '+')}" for t in trophies)
+          base_img = f"https://github-profile-trophy.vercel.app/?username={username}&theme=onestar&margin-w=10"
+          trophy_img = f"{base_img}&{params}" if params else base_img
+
           trophy_md = (
               '<a href="https://github.com/ryo-ma/github-profile-trophy">\n'
               f'  <img src="{trophy_img}" alt="trophy" />\n'
               '</a>'
           )
 
-          with open("README.md", "r", encoding="utf-8") as f:
-              readme = f.read()
-          new_readme = re.sub(
-              r'<!-- TROPHY_SECTION_START -->(.*?)<!-- TROPHY_SECTION_END -->',
-              f'<!-- TROPHY_SECTION_START -->\n{trophy_md}\n<!-- TROPHY_SECTION_END -->',
-              readme,
+          # Read, replace, write
+          readme_path = "README.md"
+          with open(readme_path, "r", encoding="utf-8") as f:
+              content = f.read()
+
+          new_content = re.sub(
+              r"<!-- TROPHY_SECTION_START -->(.*?)<!-- TROPHY_SECTION_END -->",
+              f"<!-- TROPHY_SECTION_START -->\n{trophy_md}\n<!-- TROPHY_SECTION_END -->",
+              content,
               flags=re.DOTALL,
           )
-          with open("README.md", "w", encoding="utf-8") as f:
-              f.write(new_readme)
+
+          if content != new_content:
+              with open(readme_path, "w", encoding="utf-8") as f:
+                  f.write(new_content)
+              print("✅ README.md updated.")
+          else:
+              print("ℹ️ No changes to README.md.")
           EOF
 
       - name: Commit and push if changed
@@ -57,5 +93,9 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git diff --cached --quiet || git commit -m "Update trophies in README [CI]"
-          git push
+          if ! git diff --cached --quiet; then
+            git commit -m "Update trophies in README [CI]"
+            git push
+          else
+            echo "No changes to commit"
+          fi
