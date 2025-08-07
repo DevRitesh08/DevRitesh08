@@ -25,6 +25,7 @@ jobs:
         run: |
           python <<'EOF'
           import requests
+          import os
           import re
 
           username = os.getenv("GITHUB_USERNAME")
