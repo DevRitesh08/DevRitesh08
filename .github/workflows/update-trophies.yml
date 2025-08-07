@@ -2,7 +2,7 @@ name: Update Trophies in README
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Every day at midnight
+    - cron: '0 0 * * *'  # Runs every day at midnight
   workflow_dispatch:
 
 permissions:
@@ -11,8 +11,9 @@ permissions:
 jobs:
   update-trophies:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Set up Python
@@ -20,10 +21,10 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Install required package
+      - name: Install requests
         run: pip install requests
 
-      - name: Fetch trophies and update README
+      - name: Fetch and filter trophies, update README
         env:
           GITHUB_USERNAME: DevRitesh08
         run: |
@@ -61,6 +62,8 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git rebase origin/main
           git add README.md
-          git diff --cached --quiet || git commit -m "Update trophies in README [CI]"
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref_name }}
+          git diff --cached --quiet || git commit -m "🔄 Update trophies in README [CI]"
+          git push origin HEAD:main
