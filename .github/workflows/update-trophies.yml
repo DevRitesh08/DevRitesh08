@@ -23,28 +23,21 @@ jobs:
       - name: Fetch and filter trophies, update README
         env:
           GITHUB_USERNAME: DevRitesh08
+          # GITHUB_TOKEN is still needed for pushing commits, not for the trophy API
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python3 << 'EOF'
-          import os
-          import sys
-          import json
-          import re
-          import requests
+          import os, sys, json, re, requests
 
-          username = os.environ.get("GITHUB_USERNAME")
-          token = os.environ.get("GITHUB_TOKEN")
+          username = os.getenv("GITHUB_USERNAME")
+          token = os.getenv("GITHUB_TOKEN")
           if not username or not token:
               print("❌ GITHUB_USERNAME or GITHUB_TOKEN not set")
               sys.exit(1)
 
-          url = f"https://github-profile-trophy.vercel.app/api/json/{username}"
-          headers = {
-              "Authorization": f"token {token}",
-              "Accept": "application/json",
-          }
-
-          resp = requests.get(url, headers=headers)
+          # POINT AT THE CORRECT JSON ENDPOINT
+          url = f"https://github-profile-trophy.vercel.app/api?username={username}"
+          resp = requests.get(url)
           if resp.status_code != 200:
               print(f"❌ Failed to fetch trophies: HTTP {resp.status_code}")
               print(resp.text)
@@ -57,9 +50,15 @@ jobs:
               print(resp.text)
               sys.exit(1)
 
-          trophies = [t for t in data.get("trophies", []) if t.get("level", 0) > 0]
+          # filter out trophies with level 0
+          trophies = [t for t in data if t.get("level", 0) > 0]
+
+          # build the image URL just like before
           params = "&".join(f"title={t['name'].replace(' ', '+')}" for t in trophies)
-          base_img = f"https://github-profile-trophy.vercel.app/?username={username}&theme=onestar&margin-w=10"
+          base_img = (
+              f"https://github-profile-trophy.vercel.app/"
+              f"?username={username}&theme=onestar&margin-w=10"
+          )
           trophy_img = f"{base_img}&{params}" if params else base_img
 
           trophy_md = (
@@ -68,7 +67,7 @@ jobs:
               '</a>'
           )
 
-          # Read, replace, write
+          # Read README.md, swap out between markers
           readme_path = "README.md"
           with open(readme_path, "r", encoding="utf-8") as f:
               content = f.read()
