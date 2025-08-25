@@ -6,7 +6,6 @@
   <img src="https://komarev.com/ghpvc/?username=DevRitesh08&label=Profile%20views&color=0e75b6&style=for-the-badge" alt="DevRitesh08" />
 </p>
 
-<h3 align="center">🏆 GitHub Trophies</h3>
 <p align="center">
   <img src="https://github-profile-trophy.vercel.app/?username=DevRitesh08&theme=merko&no-frame=false&no-bg=false&margin-w=4" alt="trophies"/>
 </p>
