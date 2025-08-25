@@ -6,6 +6,10 @@
   <img src="https://komarev.com/ghpvc/?username=DevRitesh08&label=Profile%20views&color=0e75b6&style=for-the-badge" alt="DevRitesh08" />
 </p>
 
+<h3 align="center">🏆 GitHub Trophies</h3>
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=DevRitesh08&theme=merko&no-frame=false&no-bg=false&margin-w=4" alt="trophies"/>
+</p>
 
 
 - 🌱 I’m currently learning **Machine Learning and advanced PySpark**
@@ -41,13 +45,6 @@
     <img src="https://github-readme-stats.vercel.app/api?username=DevRitesh08&show_icons=true&theme=merko" alt="stats"/>
     <img src="https://github-readme-stats.vercel.app/api/top-langs?username=DevRitesh08&layout=compact&theme=merko" alt="langs"/>
     <img src="https://streak-stats.demolab.com?user=DevRitesh08&theme=merko" alt="streak"/>
-  </p>
-</details>
-
-<details>
-  <summary><b>🏆 GitHub Trophies</b></summary>
-  <p align="center">
-    <img src="https://github-profile-trophy.vercel.app/?username=DevRitesh08&theme=merko&no-frame=false&no-bg=false&margin-w=4" alt="trophies"/>
   </p>
 </details>
 
