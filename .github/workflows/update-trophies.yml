@@ -1,9 +1,13 @@
+---
 name: Update Trophies in README
 
 on:
   schedule:
     - cron: '0 0 * * *'  # Runs every day at midnight
-  workflow_dispatch:
+  workflow_dispatch:  # Allow manual trigger
+  push:
+    branches: [main]
+    paths: ['.github/workflows/update-trophies.yml']
 
 permissions:
   contents: write
@@ -31,18 +35,87 @@ jobs:
           python <<'EOF'
           import os
           import re
+          import requests
+          from time import sleep
 
           username = os.getenv("GITHUB_USERNAME")
           if not username:
               print("❌ GITHUB_USERNAME not set")
               exit(1)
 
-          trophy_img = f"https://github-profile-trophy.vercel.app/?username={username}&theme=onestar&margin-w=10"
-          trophy_md = (
-              '<a href="https://github.com/ryo-ma/github-profile-trophy">\n'
-              f'  <img src="{trophy_img}" alt="trophy" />\n'
-              '</a>'
-          )
+          # List of trophy services to try (in order of preference)
+          trophy_services = [
+              f"https://github-readme-trophy.vercel.app/?username={username}&theme=onestar&margin-w=10",
+              f"https://github-profile-trophy.now.sh/?username={username}&theme=onestar&margin-w=10",
+              f"https://trophy-ryo-ma.vercel.app/?username={username}&theme=onestar&margin-w=10",
+              f"https://github-trophies.vercel.app/?username={username}&theme=onestar&margin-w=10"
+          ]
+
+          working_trophy_url = None
+          
+          # Test each service to find a working one
+          for trophy_url in trophy_services:
+              try:
+                  print(f"Testing trophy service: {trophy_url}")
+                  response = requests.get(trophy_url, timeout=10)
+                  if response.status_code == 200 and len(response.content) > 1000:  # Ensure it's not just an error page
+                      working_trophy_url = trophy_url
+                      print(f"✅ Found working trophy service: {trophy_url}")
+                      break
+                  else:
+                      print(f"❌ Service returned status {response.status_code} or insufficient content")
+              except Exception as e:
+                  print(f"❌ Service failed: {e}")
+                  continue
+              sleep(1)  # Be nice to services
+
+          # Fallback if no trophy service works - use achievement-style badges
+          if not working_trophy_url:
+              print("⚠️ No trophy service available, using achievement badges as primary display")
+              trophy_md = f'''<div align="center">
+  <h4>🏆 GitHub Achievements 🏆</h4>
+  
+  <!-- Primary achievement display using GitHub's reliable services -->
+  <img src="https://img.shields.io/github/followers/{username}?style=social&label=Followers" alt="GitHub Followers"/>
+  <img src="https://img.shields.io/github/stars/{username}?style=social&label=Total Stars" alt="GitHub Stars"/>
+  
+  <br/><br/>
+  
+  <!-- Achievement badges -->
+  <img src="https://img.shields.io/badge/🏆_Profile-Optimized-brightgreen?style=for-the-badge" alt="Profile Optimized"/>
+  <img src="https://img.shields.io/badge/💻_Developer-Active-blue?style=for-the-badge" alt="Active Developer"/>
+  <img src="https://img.shields.io/badge/📈_Growth-Continuous-orange?style=for-the-badge" alt="Continuous Growth"/>
+  
+  <br/><br/>
+  
+  <!-- GitHub stats as achievements -->
+  <img src="https://img.shields.io/badge/dynamic/json?color=brightgreen&style=flat-square&label=Public%20Repos&query=%24.public_repos&url=https://api.github.com/users/{username}" alt="Public Repos"/>
+  
+  <!-- Fallback trophy image that attempts to load from the most reliable service -->
+  <div style="margin-top: 10px;">
+    <img src="https://github-readme-trophy.vercel.app/?username={username}&theme=onestar&margin-w=10" 
+         alt="🏆 GitHub Trophies" 
+         style="max-width: 100%;"
+         onerror="this.style.display='none';">
+  </div>
+</div>'''
+          else:
+              print(f"✅ Using working trophy service: {working_trophy_url}")
+              trophy_md = f'''<div align="center">
+  <h4>🏆 GitHub Achievements 🏆</h4>
+  
+  <!-- GitHub trophy display -->
+  <img src="{working_trophy_url}" alt="🏆 GitHub Trophies" style="max-width: 100%;">
+  
+  <!-- Backup achievement badges -->
+  <div style="margin-top: 10px;">
+    <img src="https://img.shields.io/github/followers/{username}?style=social&label=Followers" alt="GitHub Followers"/>
+    <img src="https://img.shields.io/github/stars/{username}?style=social&label=Total Stars" alt="GitHub Stars"/>
+    <br/>
+    <img src="https://img.shields.io/badge/🏆_Profile-Optimized-brightgreen?style=for-the-badge" alt="Profile Optimized"/>
+    <img src="https://img.shields.io/badge/💻_Developer-Active-blue?style=for-the-badge" alt="Active Developer"/>
+  </div>
+</div>'''
 
           with open("README.md", "r", encoding="utf-8") as f:
               readme = f.read()
@@ -56,6 +129,8 @@ jobs:
 
           with open("README.md", "w", encoding="utf-8") as f:
               f.write(new_readme)
+              
+          print("✅ README.md updated successfully")
           EOF
 
       - name: Commit and push changes

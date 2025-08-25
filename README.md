@@ -9,9 +9,34 @@
 <p align="center">
   <!-- Trophy section is managed by GitHub Actions CI/CD. Do not edit manually. -->
   <!-- TROPHY_SECTION_START -->
-<a href="https://github.com/ryo-ma/github-profile-trophy">
-  <img src="https://github-profile-trophy.vercel.app/?username=DevRitesh08&theme=onestar&margin-w=10" alt="trophy" />
-</a>
+<div align="center">
+  <h4>🏆 GitHub Achievements 🏆</h4>
+  
+  <!-- Primary achievement display using GitHub's reliable services -->
+  <img src="https://img.shields.io/github/followers/DevRitesh08?style=social&label=Followers" alt="GitHub Followers"/>
+  <img src="https://img.shields.io/github/stars/DevRitesh08?style=social&label=Total Stars" alt="GitHub Stars"/>
+  
+  <br/><br/>
+  
+  <!-- Achievement badges -->
+  <img src="https://img.shields.io/badge/🏆_Profile-Optimized-brightgreen?style=for-the-badge" alt="Profile Optimized"/>
+  <img src="https://img.shields.io/badge/💻_Developer-Active-blue?style=for-the-badge" alt="Active Developer"/>
+  <img src="https://img.shields.io/badge/📈_Growth-Continuous-orange?style=for-the-badge" alt="Continuous Growth"/>
+  
+  <br/><br/>
+  
+  <!-- GitHub stats as achievements -->
+  <img src="https://img.shields.io/badge/dynamic/json?color=brightgreen&style=flat-square&label=Public%20Repos&query=%24.public_repos&url=https://api.github.com/users/DevRitesh08" alt="Public Repos"/>
+  <img src="https://img.shields.io/badge/dynamic/json?color=blue&style=flat-square&label=Total%20Commits&query=%24.total_commits&url=https://api.github.com/search/commits?q=author:DevRitesh08" alt="Total Commits"/>
+  
+  <!-- Fallback trophy image that attempts to load from the most reliable service -->
+  <div style="margin-top: 10px;">
+    <img src="https://github-readme-trophy.vercel.app/?username=DevRitesh08&theme=onestar&margin-w=10" 
+         alt="🏆 GitHub Trophies" 
+         style="max-width: 100%;"
+         onerror="this.style.display='none';">
+  </div>
+</div>
 <!-- TROPHY_SECTION_END -->
 </p>
 
