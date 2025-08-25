@@ -45,6 +45,13 @@
 </details>
 
 <details>
+  <summary><b>🏆 GitHub Trophies</b></summary>
+  <p align="center">
+    <img src="https://github-profile-trophy.vercel.app/?username=DevRitesh08&theme=merko&no-frame=false&no-bg=false&margin-w=4" alt="trophies"/>
+  </p>
+</details>
+
+<details>
 <summary>🎉 Fun Facts About Me</summary>
 
 - 📖 I like reading books  
