@@ -6,9 +6,11 @@
   <img src="https://komarev.com/ghpvc/?username=DevRitesh08&label=Profile%20views&color=0e75b6&style=for-the-badge" alt="DevRitesh08" />
 </p>
 
+<!-- TROPHY_SECTION_START -->
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=DevRitesh08&theme=merko&no-frame=false&no-bg=false&margin-w=4" alt="trophies"/>
+  <img src="https://github-profile-trophy.vercel.app/?username=DevRitesh08&theme=merko&no-frame=false&no-bg=false&margin-w=4&rank=SECRET,SSS,SS,S,AAA,AA,A,B&hide=issues" alt="GitHub Trophies"/>
 </p>
+<!-- TROPHY_SECTION_END -->
 
 
 - 🌱 I’m currently learning **Machine Learning and advanced PySpark**
@@ -43,9 +45,12 @@
   <p align="center">
     <img src="https://github-readme-stats.vercel.app/api?username=DevRitesh08&show_icons=true&theme=merko" alt="stats"/>
     <img src="https://github-readme-stats.vercel.app/api/top-langs?username=DevRitesh08&layout=compact&theme=merko" alt="langs"/>
-    <img src="https://streak-stats.demolab.com?user=DevRitesh08&theme=merko" alt="streak"/>
   </p>
 </details>
+
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=DevRitesh08&theme=merko" alt="GitHub Streak"/>
+</p>
 
 <details>
 <summary>🎉 Fun Facts About Me</summary>

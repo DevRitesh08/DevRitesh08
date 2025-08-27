@@ -18,86 +18,66 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          cat > fix_readme.py <<'ENDPY'
-import re, requests
-
-readme = "README.md"
-alternatives = {
-    # Fill with your mapping, e.g.:
-    # "https://streak-stats.demolab.com?user=DevRitesh08&theme=merko": "https://github-readme-streak-stats.herokuapp.com?user=DevRitesh08&theme=merko",
-}
-placeholder_img = "https://img.shields.io/badge/badge-broken%20image-red"
-placeholder_gif = "https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif"
-
-def find_alternative(url):
-    if url in alternatives:
-        return alternatives[url]
-    if url.lower().endswith('.gif'):
-        return placeholder_gif
-    return placeholder_img
-
-with open(readme, "r", encoding="utf-8") as f:
-    content = f.read()
-
-def restore_images(text):
-    pattern = re.compile(
-        r'(<img[^>]*src=")([^"]+)"([^>]*data-original=")([^"]+)"',
-        re.IGNORECASE
-    )
-    def repl(match):
-        alt_or_placeholder = match.group(2)
-        orig = match.group(4)
-        try:
-            r = requests.get(orig, timeout=10)
-            if r.status_code in (200, 304):
-                print(f"Restoring original: {orig}")
-                return match.group(1) + orig + '"' + match.group(3) + orig + '"'
-        except Exception:
-            pass
-        return match.group(0)
-    return pattern.sub(repl, text)
-
-content = restore_images(content)
-
-md_imgs = re.findall(r'!\[.*?\]\((.*?)\)', content)
-html_imgs = re.findall(r'<img[^>]*src="([^"]+)"', content)
-img_urls = set(md_imgs + html_imgs)
-img_urls = {u for u in img_urls if u.startswith("http")}
-
-broken = {}
-for url in img_urls:
-    if url in (placeholder_img, placeholder_gif) or url in alternatives.values():
-        continue
-    try:
-        r = requests.get(url, timeout=10)
-        if r.status_code not in (200, 304):
-            broken[url] = r.status_code
-    except Exception as e:
-        broken[url] = str(e)
-
-new_content = content
-for url in broken:
-    alt_url = find_alternative(url)
-    print(f"Auto-replacing: {url} -> {alt_url}")
-    new_content = re.sub(
-        r'!\[([^\]]*)\]\(' + re.escape(url) + r'\)',
-        f'<img src="{alt_url}" alt="\\1" data-original="{url}"/>',
-        new_content
-    )
-    new_content = re.sub(
-        r'<img([^>]*)src="' + re.escape(url) + r'"',
-        f'<img\\1src="{alt_url}" data-original="{url}"',
-        new_content
-    )
-
-if content != new_content:
-    with open(readme, "w", encoding="utf-8") as f:
-        f.write(new_content)
-    print("✅ README.md updated (auto-fix/self-heal).")
-else:
-    print("No changes needed.")
-ENDPY
-          python3 fix_readme.py
+          python3 -c "
+          import re, requests
+          
+          readme = 'README.md'
+          alternatives = {
+              'https://streak-stats.demolab.com': 'https://github-readme-streak-stats.herokuapp.com',
+              'https://github-profile-trophy.vercel.app': 'https://github-readme-trophy.vercel.app',
+          }
+          placeholder_img = 'https://img.shields.io/badge/badge-broken%20image-red'
+          placeholder_gif = 'https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif'
+          
+          def find_alternative(url):
+              for key in alternatives:
+                  if key in url:
+                      return url.replace(key, alternatives[key])
+              if url.lower().endswith('.gif'):
+                  return placeholder_gif
+              return placeholder_img
+          
+          with open(readme, 'r', encoding='utf-8') as f:
+              content = f.read()
+          
+          md_imgs = re.findall(r'!\[.*?\]\((.*?)\)', content)
+          html_imgs = re.findall(r'<img[^>]*src=\"([^\"]+)\"', content)
+          img_urls = set(md_imgs + html_imgs)
+          img_urls = {u for u in img_urls if u.startswith('http')}
+          
+          broken = {}
+          for url in img_urls:
+              if url in (placeholder_img, placeholder_gif) or any(alt in url for alt in alternatives.values()):
+                  continue
+              try:
+                  r = requests.get(url, timeout=10)
+                  if r.status_code not in (200, 304):
+                      broken[url] = r.status_code
+              except Exception as e:
+                  broken[url] = str(e)
+          
+          new_content = content
+          for url in broken:
+              alt_url = find_alternative(url)
+              print(f'Auto-replacing: {url} -> {alt_url}')
+              new_content = re.sub(
+                  r'!\[([^\]]*)\]\(' + re.escape(url) + r'\)',
+                  f'<img src=\"{alt_url}\" alt=\"\\1\" data-original=\"{url}\"/>',
+                  new_content
+              )
+              new_content = re.sub(
+                  r'<img([^>]*)src=\"' + re.escape(url) + r'\"',
+                  f'<img\\1src=\"{alt_url}\" data-original=\"{url}\"',
+                  new_content
+              )
+          
+          if content != new_content:
+              with open(readme, 'w', encoding='utf-8') as f:
+                  f.write(new_content)
+              print('✅ README.md updated (auto-fix/self-heal).')
+          else:
+              print('No changes needed.')
+          "
 
       - name: Commit and push if changed
         run: |
@@ -109,3 +89,4 @@ ENDPY
             git push
           else
             echo "No changes to commit"
+          fi
