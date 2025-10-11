@@ -1,3 +1,7 @@
+
+## 🏆 GitHub Trophies
+![](https://github-profile-trophy.vercel.app/?username=alamimran613&theme=radical&no-frame=false&no-bg=false&margin-w=4)
+
 <h1 align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=15C39A&background=FFFFFF00&center=true&vCenter=true&width=435&lines=Hi+%F0%9F%91%8B%2C+I'm+Ritesh+Swami;Aspiring+Data+Scientist;Always+learning+something+new..." alt="Typing SVG" />
 </h1>
