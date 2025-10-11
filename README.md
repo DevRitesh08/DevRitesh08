@@ -8,7 +8,7 @@
 
 <!-- TROPHY_SECTION_START -->
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=DevRitesh08&theme=merko&no-frame=false&no-bg=false&margin-w=4&rank=SECRET,SSS,SS,S,AAA,AA,A,B&hide=issues" alt="GitHub Trophies"/>
+  <img src="https://github-profile-trophy.vercel.app/?username=DevRitesh08&theme=merko&no-frame=false&no-bg=false&margin-w=4&rank=SECRET,SSS,SS,S,AAA,AA,A,B,C" alt="GitHub Trophies"/>
 </p>
 <!-- TROPHY_SECTION_END -->
 
