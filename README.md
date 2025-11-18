@@ -13,7 +13,7 @@
 <!-- TROPHY_SECTION_END -->
 
 
-- 🌱 I’m currently learning **Machine Learning and advanced SQL**
+- 🌱 I’m currently learning **Machine Learning and advanced Statistics**
 - 💬 Always eager to connect and explore new opportunities in tech!
 - 📫 How to reach me: [riteshswamiofficial@gmail.com](mailto:riteshswamiofficial@gmail.com)
 
