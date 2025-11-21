@@ -28,7 +28,7 @@ jobs:
       - name: Install requests
         run: pip install requests
 
-      - name: Update trophies with high-level achievements
+      - name: Update trophies in README
         env:
           GITHUB_USERNAME: DevRitesh08
         run: |
@@ -43,11 +43,11 @@ jobs:
               print("❌ GITHUB_USERNAME not set")
               exit(1)
 
-          # Trophy services with parameters for high-level trophies only
+          # Trophy services - show all trophies
           trophy_services = [
-              f"https://github-profile-trophy.vercel.app/?username={username}&theme=merko&no-frame=false&no-bg=false&margin-w=4&rank=SECRET,SSS,SS,S,AAA,AA,A&hide=issues",
-              f"https://github-readme-trophy.vercel.app/?username={username}&theme=merko&no-frame=false&no-bg=false&margin-w=4&rank=SECRET,SSS,SS,S,AAA,AA,A&hide=issues",
-              f"https://trophy-ryo-ma.vercel.app/?username={username}&theme=merko&no-frame=false&no-bg=false&margin-w=4&rank=SECRET,SSS,SS,S,AAA,AA,A&hide=issues"
+              f"https://github-profile-trophy.vercel.app/?username={username}&theme=merko&no-frame=false&no-bg=false&margin-w=4",
+              f"https://github-readme-trophy.vercel.app/?username={username}&theme=merko&no-frame=false&no-bg=false&margin-w=4",
+              f"https://trophy-ryo-ma.vercel.app/?username={username}&theme=merko&no-frame=false&no-bg=false&margin-w=4"
           ]
 
           working_trophy_url = None
@@ -93,7 +93,7 @@ jobs:
           with open("README.md", "w", encoding="utf-8") as f:
               f.write(new_readme)
               
-          print("✅ README.md updated successfully with high-level trophies")
+          print("✅ README.md updated successfully with trophies")
           EOF
 
       - name: Commit and push changes
@@ -103,5 +103,5 @@ jobs:
           git fetch origin main
           git rebase origin/main
           git add README.md
-          git diff --cached --quiet || git commit -m "🔄 Update high-level trophies in README [CI]"
+          git diff --cached --quiet || git commit -m "🔄 Update trophies in README [CI]"
           git push origin HEAD:main
