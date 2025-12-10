@@ -6,22 +6,24 @@
   <img src="https://komarev.com/ghpvc/?username=DevRitesh08&label=Profile%20views&color=0e75b6&style=for-the-badge" alt="DevRitesh08" />
 </p>
 
-<!-- TROPHY_SECTION_START -->
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=DevRitesh08&theme=merko&no-frame=false&no-bg=false&margin-w=4&rank=SECRET,SSS,SS,S,AAA,AA,A,B" alt="GitHub Trophies"/>
+  <!-- Trophy section is managed by GitHub Actions CI/CD. Do not edit manually. -->
+  <!-- TROPHY_SECTION_START -->
+  <a href="https://github.com/ryo-ma/github-profile-trophy">
+    <img src="https://github-profile-trophy.vercel.app/?username=DevRitesh08&theme=onestar&margin-w=10" alt="trophy" />
+  </a>
+  <!-- TROPHY_SECTION_END -->
 </p>
-<!-- TROPHY_SECTION_END -->
 
-
-- 🌱 I’m currently learning **Machine Learning and Deep Learning**
+- 🌱 I’m currently learning **Machine Learning and advanced PySpark**
 - 💬 Always eager to connect and explore new opportunities in tech!
 - 📫 How to reach me: [riteshswamiofficial@gmail.com](mailto:riteshswamiofficial@gmail.com)
 
 <h3 align="center">Connect with me</h3>
 <p align="center">
   <a href="mailto:riteshswamiofficial@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
+  <a href="https://github.com/DevRitesh08"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>
   <a href="https://www.linkedin.com/in/ritesh-swami-61ab53309/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
-  <a href="https://www.kaggle.com/riteshswami08"><img src="https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white"></a>
 </p>
 
 <h3 align="center">Languages and Tools</h3>
@@ -35,25 +37,19 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" title="SQL" width="50" height="50" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" title="HTML" width="50" height="50" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" title="CSS" width="50" height="50" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript" width="50" height="50" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" title="Linux" width="50" height="50" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" title="Git" width="50" height="50" />
 
 </p>
 
-<h3 align="center">📊 Github Stats</h3>
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=DevRitesh08&show_icons=true&theme=merko" alt="stats"/>
-</p>
-
-<h3 align="center">🔝 Top Languages</h3>
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=DevRitesh08&layout=compact&theme=merko" alt="langs"/>
-</p>
-
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=DevRitesh08&theme=merko" alt="GitHub Streak"/>
-</p>
+<details>
+  <summary><b>📊 Github Stats</b></summary>
+  <p align="center">
+    <img src="https://github-readme-stats.vercel.app/api?username=DevRitesh08&show_icons=true&theme=merko" alt="stats"/>
+    <img src="https://github-readme-stats.vercel.app/api/top-langs?username=DevRitesh08&layout=compact&theme=merko" alt="langs"/>
+    <img src="https://streak-stats.demolab.com?user=DevRitesh08&theme=merko" alt="streak"/>
+  </p>
+</details>
 
 <details>
 <summary>🎉 Fun Facts About Me</summary>
