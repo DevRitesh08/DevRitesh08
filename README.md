@@ -41,13 +41,15 @@
 
 </p>
 
-<details>
-  <summary><b>📊 Github Stats</b></summary>
-  <p align="center">
-    <img src="https://github-readme-stats.vercel.app/api?username=DevRitesh08&show_icons=true&theme=merko" alt="stats"/>
-    <img src="https://github-readme-stats.vercel.app/api/top-langs?username=DevRitesh08&layout=compact&theme=merko" alt="langs"/>
-  </p>
-</details>
+<h3 align="center">📊 Github Stats</h3>
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=DevRitesh08&show_icons=true&theme=merko" alt="stats"/>
+</p>
+
+<h3 align="center">🔝 Top Languages</h3>
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=DevRitesh08&layout=compact&theme=merko" alt="langs"/>
+</p>
 
 <p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=DevRitesh08&theme=merko" alt="GitHub Streak"/>
