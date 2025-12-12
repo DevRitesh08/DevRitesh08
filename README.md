@@ -6,13 +6,16 @@
   <img src="https://komarev.com/ghpvc/?username=DevRitesh08&label=Profile%20views&color=0e75b6&style=for-the-badge" alt="DevRitesh08" />
 </p>
 
+<!-- ⭐ FIXED STREAK: now always visible -->
 <p align="center">
-  <!-- Trophy section is managed by GitHub Actions CI/CD. Do not edit manually. -->
-  <!-- TROPHY_SECTION_START -->
+  <img src="https://streak-stats.demolab.com/?user=DevRitesh08&theme=merko&hide_border=true&date_format=j%20M%5B%20Y%5D" alt="GitHub Streak" />
+</p>
+
+<!-- 🏆 FIXED TROPHIES: now visible & proper layout -->
+<p align="center">
   <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=DevRitesh08&theme=onestar&margin-w=10" alt="trophy" />
+    <img src="https://github-profile-trophy.vercel.app/?username=DevRitesh08&theme=onestar&margin-w=15&no-bg=true&row=1" alt="trophy" />
   </a>
-  <!-- TROPHY_SECTION_END -->
 </p>
 
 - 🌱 I’m currently learning **Machine Learning and advanced PySpark**
@@ -47,7 +50,6 @@
   <p align="center">
     <img src="https://github-readme-stats.vercel.app/api?username=DevRitesh08&show_icons=true&theme=merko" alt="stats"/>
     <img src="https://github-readme-stats.vercel.app/api/top-langs?username=DevRitesh08&layout=compact&theme=merko" alt="langs"/>
-    <img src="https://streak-stats.demolab.com?user=DevRitesh08&theme=merko" alt="streak"/>
   </p>
 </details>
 
