@@ -6,15 +6,6 @@
   <img src="https://komarev.com/ghpvc/?username=DevRitesh08&label=Profile%20views&color=0e75b6&style=for-the-badge" alt="Profile Views" />
 </p>
 
-<h3 align="center">🔥 GitHub Streak</h3>
-<p align="center">
-  <img
-    src="https://streak-stats.demolab.com?user=DevRitesh08&theme=merko&hide_border=false"
-    width="420"
-    alt="GitHub Streak"
-  />
-</p>
-
 <h3 align="center">🏆 GitHub Trophies</h3>
 <p align="center">
   <img
@@ -52,6 +43,15 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="50" height="50" alt="CSS" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" width="50" height="50" alt="Linux" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="50" height="50" alt="Git" />
+</p>
+
+<h3 align="center">🔥 GitHub Streak</h3>
+<p align="center">
+  <img
+    src="https://streak-stats.demolab.com?user=DevRitesh08&theme=merko&hide_border=false"
+    width="420"
+    alt="GitHub Streak"
+  />
 </p>
 
 <details>
