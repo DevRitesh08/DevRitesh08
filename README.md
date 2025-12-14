@@ -3,19 +3,24 @@
 </h1>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=DevRitesh08&label=Profile%20views&color=0e75b6&style=for-the-badge" alt="DevRitesh08" />
+  <img src="https://komarev.com/ghpvc/?username=DevRitesh08&label=Profile%20views&color=0e75b6&style=for-the-badge" alt="Profile Views" />
 </p>
 
-<!-- ⭐ FIXED STREAK: now always visible -->
+<h3 align="center">🔥 GitHub Streak</h3>
 <p align="center">
-  <img src="https://streak-stats.demolab.com/?user=DevRitesh08&theme=merko&hide_border=true&date_format=j%20M%5B%20Y%5D" alt="GitHub Streak" />
+  <img
+    src="https://streak-stats.demolab.com?user=DevRitesh08&theme=merko&hide_border=false"
+    width="420"
+    alt="GitHub Streak"
+  />
 </p>
 
-<!-- 🏆 FIXED TROPHIES: now visible & proper layout -->
+<h3 align="center">🏆 GitHub Trophies</h3>
 <p align="center">
-  <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=DevRitesh08&theme=onestar&margin-w=15&no-bg=true&row=1" alt="trophy" />
-  </a>
+  <img
+    src="https://github-profile-trophy.vercel.app/?username=DevRitesh08&theme=onestar&row=1&column=6&margin-w=10&no-frame=true"
+    alt="GitHub Trophies"
+  />
 </p>
 
 - 🌱 I’m currently learning **Machine Learning and advanced Statistics**
@@ -24,37 +29,41 @@
 
 <h3 align="center">Connect with me</h3>
 <p align="center">
-  <a href="mailto:riteshswamiofficial@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
-  <a href="https://github.com/DevRitesh08"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>
-  <a href="https://www.linkedin.com/in/ritesh-swami-61ab53309/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
+  <a href="mailto:riteshswamiofficial@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white">
+  </a>
+  <a href="https://github.com/DevRitesh08">
+    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white">
+  </a>
+  <a href="https://www.linkedin.com/in/ritesh-swami-61ab53309/">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+  </a>
 </p>
 
 <h3 align="center">Languages and Tools</h3>
 <p align="center">
-
-  <img src="https://media.giphy.com/media/KAq5w47R9rmTuvWOWa/giphy.gif" alt="Python" title="Python" width="50" height="50" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" title="C++" width="50" height="50" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" title="Java" width="50" height="50" />
-  <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Apache_Spark_logo.svg" alt="PySpark" title="PySpark" width="50" height="50" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cassandra/cassandra-original.svg" alt="Cassandra" title="Cassandra" width="50" height="50" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" title="SQL" width="50" height="50" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" title="HTML" width="50" height="50" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" title="CSS" width="50" height="50" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" title="Linux" width="50" height="50" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" title="Git" width="50" height="50" />
-
+  <img src="https://media.giphy.com/media/KAq5w47R9rmTuvWOWa/giphy.gif" width="50" height="50" alt="Python" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" width="50" height="50" alt="C++" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="50" height="50" alt="Java" />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Apache_Spark_logo.svg" width="50" height="50" alt="PySpark" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cassandra/cassandra-original.svg" width="50" height="50" alt="Cassandra" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="50" height="50" alt="SQL" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="50" height="50" alt="HTML" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="50" height="50" alt="CSS" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" width="50" height="50" alt="Linux" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="50" height="50" alt="Git" />
 </p>
 
 <details>
   <summary><b>📊 Github Stats</b></summary>
   <p align="center">
-    <img src="https://github-readme-stats.vercel.app/api?username=DevRitesh08&show_icons=true&theme=merko" alt="stats"/>
-    <img src="https://github-readme-stats.vercel.app/api/top-langs?username=DevRitesh08&layout=compact&theme=merko" alt="langs"/>
+    <img src="https://github-readme-stats.vercel.app/api?username=DevRitesh08&show_icons=true&theme=merko" alt="Stats"/>
+    <img src="https://github-readme-stats.vercel.app/api/top-langs?username=DevRitesh08&layout=compact&theme=merko" alt="Top Languages"/>
   </p>
 </details>
 
 <details>
-<summary>🎉 Fun Facts About Me</summary>
+  <summary>🎉 Fun Facts About Me</summary>
 
 - 📖 I like reading books  
 - 👨‍💻 Coding is my passion  
