@@ -8,10 +8,12 @@
 
 <h3 align="center">🏆 GitHub Trophies</h3>
 <p align="center">
-  <img
-    src="https://github-profile-trophy.vercel.app/?username=DevRitesh08&theme=onestar&row=1&column=6&margin-w=10&no-frame=true"
-    alt="GitHub Trophies"
-  />
+  <a href="https://github.com/ryo-ma/github-profile-trophy">
+    <img
+      src="https://github-profile-trophy.vercel.app/?username=DevRitesh08&theme=onestar&row=1&column=6&margin-w=10&no-frame=true"
+      alt="GitHub Trophies"
+    />
+  </a>
 </p>
 
 - 🌱 I’m currently learning **Machine Learning and advanced Statistics**
@@ -28,6 +30,9 @@
   </a>
   <a href="https://www.linkedin.com/in/ritesh-swami-61ab53309/">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+  </a>
+  <a href="https://www.kaggle.com/riteshswami08">
+    <img src="https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white">
   </a>
 </p>
 
@@ -47,11 +52,13 @@
 
 <h3 align="center">🔥 GitHub Streak</h3>
 <p align="center">
-  <img
-    src="https://streak-stats.demolab.com?user=DevRitesh08&theme=merko&hide_border=false"
-    width="420"
-    alt="GitHub Streak"
-  />
+  <a href="https://git.io/streak-stats">
+    <img
+      src="https://streak-stats.demolab.com?user=DevRitesh08&theme=merko&hide_border=false"
+      width="420"
+      alt="GitHub Streak"
+    />
+  </a>
 </p>
 
 <details>
