@@ -2,6 +2,7 @@
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=15C39A&background=FFFFFF00&center=true&vCenter=true&width=435&lines=Hi+%F0%9F%91%8B%2C+I'm+Ritesh+Swami;Aspiring+Data+Scientist;Always+learning+something+new..." alt="Typing SVG" />
 </h1>
 
+
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=DevRitesh08&label=Profile%20views&color=0e75b6&style=for-the-badge" alt="Profile Views" />
 </p>
