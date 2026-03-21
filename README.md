@@ -16,7 +16,7 @@
   </a>
 </p>
 
-- 🌱 I’m currently learning **Machine Learning and advanced Statistics**
+- 🌱 I’m currently learning **Machine Learning and Gen AI**
 - 💬 Always eager to connect and explore new opportunities in tech!
 - 📫 How to reach me: [riteshswamiofficial@gmail.com](mailto:riteshswamiofficial@gmail.com)
 
