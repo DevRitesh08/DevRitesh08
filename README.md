@@ -19,7 +19,7 @@
 ## About Me
 
 - 🔭 Building projects across **Machine Learning, Data Science, GenAI, and DSA**
-- 🌱 Currently learning **advanced ML, GenAI workflows, and scalable data systems**
+- 🌱 Currently learning **advanced DL, GenAI workflows, and scalable data systems**
 - 💡 I enjoy turning raw data into useful insights and real products
 - 🎯 Strong interest in **problem solving, coding, and practical engineering**
 - ☕ I ship best when the problem is hard and the deadline is near
